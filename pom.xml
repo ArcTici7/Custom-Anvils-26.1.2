@@ -16,7 +16,7 @@
     <dependency>
       <groupId>io.papermc.paper</groupId>
       <artifactId>paper-api</artifactId>
-      <version>1.26.1-R0.1-SNAPSHOT</version>
+      <version>1.21.1-R0.1-SNAPSHOT</version> <!-- Reverting string to stable build while keeping Java 25 target -->
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -26,10 +26,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
+        <version>3.13.0</version>
         <configuration>
-          <source>21</source>
-          <target>21</target>
+          <release>25</release> <!-- Use release tag for Java 25 -->
         </configuration>
       </plugin>
     </plugins>
